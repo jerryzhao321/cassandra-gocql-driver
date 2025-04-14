@@ -771,7 +771,14 @@ func (f *framer) writeTo(w io.Writer) error {
 }
 
 func (f *framer) readTrace() {
-	f.traceID = f.readUUID().Bytes()
+	if len(f.buf) < 16 {
+		panic(fmt.Errorf("not enough bytes in buffer to read trace uuid require 16 got: %d", len(f.buf)))
+	}
+	if len(f.traceID) != 16 {
+		f.traceID = make([]byte, 16)
+	}
+	copy(f.traceID, f.buf[:16])
+	f.buf = f.buf[16:]
 }
 
 type readyFrame struct {
@@ -1874,17 +1881,6 @@ func (f *framer) readLongString() (s string) {
 	s = string(f.buf[:size])
 	f.buf = f.buf[size:]
 	return
-}
-
-func (f *framer) readUUID() *UUID {
-	if len(f.buf) < 16 {
-		panic(fmt.Errorf("not enough bytes in buffer to read uuid require %d got: %d", 16, len(f.buf)))
-	}
-
-	// TODO: how to handle this error, if it is a uuid, then sureley, problems?
-	u, _ := UUIDFromBytes(f.buf[:16])
-	f.buf = f.buf[16:]
-	return &u
 }
 
 func (f *framer) readStringList() []string {
