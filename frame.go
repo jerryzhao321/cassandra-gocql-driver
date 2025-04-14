@@ -700,31 +700,19 @@ func (f *framer) readErrorMap() (errMap ErrorMap) {
 }
 
 func (f *framer) writeHeader(flags byte, op frameOp, stream int) {
-	f.buf = f.buf[:0]
-	f.buf = append(f.buf,
-		f.proto,
-		flags,
-	)
-
-	if f.proto > protoVersion2 {
-		f.buf = append(f.buf,
-			byte(stream>>8),
-			byte(stream),
+	if f.proto <= protoVersion2 {
+		f.buf = append(f.buf[:0],
+			f.proto, flags, byte(stream),
+			// pad out length
+			byte(op), 0, 0, 0, 0,
 		)
 	} else {
-		f.buf = append(f.buf,
-			byte(stream),
+		f.buf = append(f.buf[:0],
+			f.proto, flags, byte(stream>>8), byte(stream),
+			// pad out length
+			byte(op), 0, 0, 0, 0,
 		)
 	}
-
-	// pad out length
-	f.buf = append(f.buf,
-		byte(op),
-		0,
-		0,
-		0,
-		0,
-	)
 }
 
 func (f *framer) setLength(length int) {
