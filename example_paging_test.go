@@ -28,7 +28,7 @@ import (
 	"fmt"
 	"log"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
+	gocql "github.com/gocql/gocql"
 )
 
 // Example_paging demonstrates how to manually fetch pages and use page state.

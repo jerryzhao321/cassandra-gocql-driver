@@ -28,7 +28,7 @@ import (
 	"fmt"
 	"log"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
+	gocql "github.com/gocql/gocql"
 )
 
 // Example_nulls demonstrates how to distinguish between null and zero value when needed.

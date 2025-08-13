@@ -21,7 +21,7 @@ package gocqlzerolog
 import (
 	"github.com/rs/zerolog"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
+	gocql "github.com/gocql/gocql"
 )
 
 const DefaultName = "gocql"
