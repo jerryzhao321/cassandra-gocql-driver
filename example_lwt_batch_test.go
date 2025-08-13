@@ -29,7 +29,7 @@ import (
 	"fmt"
 	"log"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
 )
 
 // ExampleSession_MapExecuteBatchCAS demonstrates how to execute a batch lightweight transaction.

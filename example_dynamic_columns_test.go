@@ -32,7 +32,7 @@ import (
 	"reflect"
 	"text/tabwriter"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
 )
 
 // Example_dynamicColumns demonstrates how to handle dynamic column list.

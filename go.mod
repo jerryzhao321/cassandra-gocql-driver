@@ -15,7 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-module github.com/jerryzhao321/cassandra-gocql-driver/v2
+module github.com/jerryzhao321/cassandra-gocql-driver
 
 require (
 	github.com/golang/snappy v0.0.3

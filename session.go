@@ -38,7 +38,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/jerryzhao321/cassandra-gocql-driver/v2/internal/lru"
+	"github.com/jerryzhao321/cassandra-gocql-driver/internal/lru"
 )
 
 // Session is the interface used by users to interact with the database.

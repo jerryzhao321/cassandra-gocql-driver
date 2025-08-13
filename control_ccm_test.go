@@ -33,7 +33,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jerryzhao321/cassandra-gocql-driver/v2/internal/ccm"
+	"github.com/jerryzhao321/cassandra-gocql-driver/internal/ccm"
 )
 
 type TestHostFilter struct {

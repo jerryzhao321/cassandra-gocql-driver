@@ -29,7 +29,7 @@ import (
 	"fmt"
 	"log"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
 )
 
 // Example_userDefinedTypesMap demonstrates how to work with user-defined types as maps.

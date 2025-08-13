@@ -28,7 +28,7 @@ import (
 
 	"github.com/hailocab/go-hostpool"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
 )
 
 func TestHostPolicy_HostPool(t *testing.T) {

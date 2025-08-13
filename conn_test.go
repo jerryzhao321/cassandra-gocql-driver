@@ -50,7 +50,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/jerryzhao321/cassandra-gocql-driver/v2/internal/streams"
+	"github.com/jerryzhao321/cassandra-gocql-driver/internal/streams"
 )
 
 const (

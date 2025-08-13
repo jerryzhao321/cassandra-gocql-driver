@@ -31,7 +31,7 @@ import (
 	"strconv"
 	"strings"
 
-	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver"
 )
 
 // MyMarshaler implements Marshaler and Unmarshaler.
