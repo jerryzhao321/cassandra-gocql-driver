@@ -21,7 +21,7 @@ package gocqlzap
 import (
 	"go.uber.org/zap"
 
-	gocql "github.com/apache/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
 )
 
 const DefaultName = "gocql"

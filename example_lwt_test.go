@@ -29,7 +29,7 @@ import (
 	"fmt"
 	"log"
 
-	gocql "github.com/apache/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
 )
 
 // ExampleQuery_MapScanCAS demonstrates how to execute a single-statement lightweight transaction.

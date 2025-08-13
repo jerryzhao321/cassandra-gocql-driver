@@ -29,7 +29,7 @@ import (
 	"log"
 	"sort"
 
-	gocql "github.com/apache/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
 )
 
 // Example_set demonstrates how to use sets.

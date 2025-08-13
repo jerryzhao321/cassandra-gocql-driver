@@ -30,7 +30,7 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	gocql "github.com/apache/cassandra-gocql-driver/v2"
+	gocql "github.com/jerryzhao321/cassandra-gocql-driver/v2"
 )
 
 const logLineEnding = "%%%\n%%%"

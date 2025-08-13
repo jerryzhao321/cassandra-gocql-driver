@@ -37,7 +37,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/apache/cassandra-gocql-driver/v2/internal/murmur"
+	"github.com/jerryzhao321/cassandra-gocql-driver/v2/internal/murmur"
 )
 
 // a token partitioner
