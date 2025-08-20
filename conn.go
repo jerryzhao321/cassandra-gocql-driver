@@ -866,7 +866,7 @@ type connReader struct {
 }
 
 func (c *connReader) Read(p []byte) (n int, err error) {
-	const maxAttempts = 5
+	const maxAttempts = 1
 
 	for i := 0; i < maxAttempts; i++ {
 		var nn int
